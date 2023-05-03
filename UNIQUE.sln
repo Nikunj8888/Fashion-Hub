@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UNIQUE", "UNIQUE\UNIQUE.csproj", "{039EBECA-1E76-4C7A-8D4E-652233F3004E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0141DBDF-72CD-4816-900D-BA49BCBDB646}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Users\Nikunj\PROJECT\UNIQUE\UNIQUE\App_Data\Fashion.mdf = ..\..\Users\Nikunj\PROJECT\UNIQUE\UNIQUE\App_Data\Fashion.mdf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{039EBECA-1E76-4C7A-8D4E-652233F3004E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{039EBECA-1E76-4C7A-8D4E-652233F3004E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{039EBECA-1E76-4C7A-8D4E-652233F3004E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{039EBECA-1E76-4C7A-8D4E-652233F3004E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D4F62FF-4E5F-4767-88EC-6A06C331ADBA}
+	EndGlobalSection
+EndGlobal
