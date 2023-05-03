@@ -47,18 +47,55 @@ namespace UNIQUE
 
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["abc"].ConnectionString);
             con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Login  VALUES('" + txtusername.Text + "','" + txtpassword.Text + "')", con);
+            SqlCommand cmd = new SqlCommand("select * from Login where UserName=@UserName", con);
+            cmd.Parameters.AddWithValue("@UserName", txtusername.Text);
+            SqlDataReader dr = cmd.ExecuteReader();
 
-
-            int a=cmd.ExecuteNonQuery();
-            if(a> 0)
+            if (dr.Read())
             {
-                Response.Redirect("C/home.aspx");
+                Label1.Visible = true;
+                Label1.Text = "Already exist this user !!!";
+
+                
             }
 
-            con.Close();
+            else
+            {
+                con.Close();
+                SqlCommand cmd1 = new SqlCommand("INSERT INTO Login(UserName,Password) VALUES('" + txtusername.Text + "','" + txtpassword.Text + "')", con);
+                con.Open();
+                int a = cmd1.ExecuteNonQuery();
+                if (a > 0)
+                {
+                    Response.Redirect("C/home.aspx");
+                }
+
+
+                con.Close();
+            }
+
+
+
+
+
+            //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["abc"].ConnectionString);
+            //con.Open();
+            //SqlCommand cmd = new SqlCommand("INSERT INTO Login  VALUES('" + txtusername.Text + "','" + txtpassword.Text + "')", con);
+
+
+            //int a=cmd.ExecuteNonQuery();
+            //if(a> 0)
+            //{
+            //    Response.Redirect("C/home.aspx");
+            //}
+            //else
+            //{
+            //    Label1.Text = "Already have a this user !!!";
+            //}
+
+            //con.Close();
         }
-       
+
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
